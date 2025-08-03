@@ -16,7 +16,7 @@ describe('Enums', () => {
       await contract.set(1)
       expect(await contract.get()).to.equal(1)
 
-      // Cancel
+      // Complete
       await contract.complete()
       expect(await contract.get()).to.equal(2)
 
@@ -25,5 +25,4 @@ describe('Enums', () => {
       expect(await contract.get()).to.equal(0)
     })
   })
-
 })

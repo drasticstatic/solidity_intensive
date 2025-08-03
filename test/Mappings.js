@@ -16,13 +16,13 @@ describe('Mappings', () => {
       let contract = await Contract.deploy()
       expect(await contract.names(1)).to.equal('Adam')
       expect(await contract.names(2)).to.equal('Ben')
-      expect(await contract.names(3)).to.equal('')
+      expect(await contract.names(3)).to.equal('')// default value = empty string
       expect(await contract.addresses(1)).to.equal('0x3EcEf08D0e2DaD803847E052249bb4F8bFf2D5bB')
       expect(await contract.addresses(2)).to.equal('0xe5c430b2Dd2150a20f25C7fEde9981f767A48A3c')
-      expect(await contract.addresses(3)).to.equal('0x0000000000000000000000000000000000000000')
+      expect(await contract.addresses(3)).to.equal('0x0000000000000000000000000000000000000000')// default value
       expect(await contract.hasVoted('0x3EcEf08D0e2DaD803847E052249bb4F8bFf2D5bB')).to.equal(true)
       expect(await contract.hasVoted('0xe5c430b2Dd2150a20f25C7fEde9981f767A48A3c')).to.equal(true)
-      expect(await contract.hasVoted('0x4f7d078Ed1A55a788e1e7eCD02f2c8249e2d11Ab')).to.equal(false)
+      expect(await contract.hasVoted('0x4f7d078Ed1A55a788e1e7eCD02f2c8249e2d11Ab')).to.equal(false) // default value for boolean = false
     })
   })
 
@@ -35,7 +35,13 @@ describe('Mappings', () => {
       expect(result[0]).to.equal('A Tale of Two Cities')
       expect(result[1]).to.equal('Charles Dickens')
 
-      // Homework: check book 2
+      let result2 = await contract.books(2)
+      expect(result2[0]).to.equal('Les Miserables')
+      expect(result2[1]).to.equal('Victor Hugo')
+
+      let result3 = await contract.books(3)
+      expect(result3[0]).to.equal('1984')
+      expect(result3[1]).to.equal('George Orwell')
 
       let user1 = '0x3EcEf08D0e2DaD803847E052249bb4F8bFf2D5bB'
       let dai = '0x6B175474E89094C44Da98b954EedeAC495271d0F'
@@ -82,10 +88,8 @@ describe('Mappings', () => {
       expect(await contract.get(user2, 3)).to.equal(true)
 
       await contract.remove(user1, 1)
-      expect(await contract.get(user1, 1)).to.equal(false)
+      expect(await contract.get(user1, 1)).to.equal(false)// default value for boolean is false
 
     })
   })
-
-
 })

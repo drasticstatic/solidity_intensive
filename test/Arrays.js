@@ -1,3 +1,9 @@
+// ========== ARRAYS.js ==========
+
+/* This test covers the following:
+  -
+*/
+
 const { expect } = require('chai');
 const { ethers } = require('hardhat');
 

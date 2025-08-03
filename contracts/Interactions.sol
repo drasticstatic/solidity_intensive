@@ -21,6 +21,11 @@ contract SecretVault {
     }
 }
 
+// Interact with contract in-view (above):
+// Store to variable and call directly
+// This is useful when you have the contract instance available at deployment time
+// Note: This is a common pattern for interacting with contracts that you control or have deployed
+// This allows you to call functions on the contract directly without needing to import an interface
 contract Interactions1 {
     SecretVault public secretVault;
 
@@ -37,6 +42,11 @@ contract Interactions1 {
     }
 }
 
+// Interact with contract in-line (below) via importing interface:
+// Note: This is a more flexible way to interact with contracts, especially if you don't have
+// the contract instance available at deployment time or if you want to interact with multiple contracts
+// Import the interface of the contract you want to interact with
+// This allows you to call functions on the contract without needing the full contract code
 import "./Token.sol";
 
 interface IERC20 {
@@ -46,9 +56,10 @@ interface IERC20 {
         uint256 _value
     )
         external
-        returns (bool success);
+        returns (bool success); //{} No function body needed, just the arguments, modifiers and return type
 }
 
+// Instantiate in-line:
 contract Interactions2 {
 
     function deposit(address _tokenAddress, uint _amount) public {

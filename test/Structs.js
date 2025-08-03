@@ -18,7 +18,7 @@ describe('Structs', () => {
       expect(result[1]).to.equal('Charles Dickens')
       expect(result[2]).to.equal(false)
 
-      // TOOD: homework - check the other books
+      // To do- check the other books
 
       // Complete a book
       await contract.complete(0)

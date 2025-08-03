@@ -91,7 +91,7 @@ contract Inheritance4 is Token2 {
     }
 
     function balanceOf(address _account) virtual override public view returns(uint) {
-        uint balance = super.balanceOf(_account);
+        uint balance = super.balanceOf(_account); // super keyword calls parent function
         return balance * 10;
     }
 }

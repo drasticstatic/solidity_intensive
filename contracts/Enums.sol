@@ -3,6 +3,13 @@ pragma solidity ^0.8.0;
 
 import "hardhat/console.sol";
 
+// Enums = enumerated types
+// Enums are a way to define a set of named values, which can be used to
+// represent a finite set of options. They are useful for defining states or categories
+// in a contract, making the code more readable and maintainable.
+
+// Homework: try implementing some enums inside function calls
+
 // Structs
 contract Enums1 {
     enum Status {

@@ -27,13 +27,20 @@ describe('Conditionals', () => {
       const Contract = await ethers.getContractFactory('Conditionals2')
       let contract = await Contract.deploy()
       expect(await contract.checkNumber1(1)).to.equal(0)
+      // 1 is less than 5, so it returns 0
       expect(await contract.checkNumber1(20)).to.equal(1)
+      // 20 is between 10 and 30, so it returns 1
       expect(await contract.checkNumber1(3000)).to.equal(2)
+      // 3000 is greater than 1000, so it returns 2
 
       expect(await contract.checkNumber2(1)).to.equal(0)
+      // 1 is less than 5, so it returns 0
       expect(await contract.checkNumber2(6)).to.equal(1)
+      // 6 is between 5 and 10, so it returns 1
       expect(await contract.checkNumber2(20)).to.equal(2)
+      // 20 is between 10 and 30, so it returns 2
       expect(await contract.checkNumber2(3000)).to.equal(3)
+      // 3000 is greater than 1000, so it returns 3
     })
 
   })

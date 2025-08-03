@@ -16,10 +16,13 @@ describe('Ether', () => {
       contract = await Contract.deploy()
 
       expect(await contract.value1()).to.equal(await contract.value2())
-      expect(await contract.value3()).to.equal(await contract.value4())
-      expect(await contract.value5()).to.equal(await contract.value6())
-    })
 
+      expect(await contract.value3()).to.equal(await contract.value4())
+      expect(await contract.value4()).to.equal(await contract.value5())
+
+      expect(await contract.value6()).to.equal(await contract.value7())
+      expect(await contract.value7()).to.equal(await contract.value8())
+    })
   })
 
   describe('Example 2', () => {
@@ -33,9 +36,7 @@ describe('Ether', () => {
 
       await owner.sendTransaction({ to: contract.address, value: ether(1) })
       expect(await ethers.provider.getBalance(contract.address)).to.equal(ether(1))
-
     })
-
   })
 
   describe('Example 3', () => {
@@ -51,7 +52,6 @@ describe('Ether', () => {
       expect(await contract.checkBalance()).to.equal(ether(1))
       expect(await contract.count()).to.equal(1)
     })
-
   })
 
   describe('Example 4', () => {
@@ -69,7 +69,6 @@ describe('Ether', () => {
       await contract.transfer2(receiver, { value: ether(1) })
       expect(await ethers.provider.getBalance(receiver)).to.equal(ether(2))
     })
-
   })
 
   describe('Example 5', () => {
@@ -84,7 +83,5 @@ describe('Ether', () => {
       await contract.deposit2({ value: ether(1) })
       expect(await ethers.provider.getBalance(contract.address)).to.equal(ether(1))
     })
-
   })
-
 })

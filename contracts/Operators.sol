@@ -26,6 +26,24 @@ contract Operators1 {
         return a ** b;
     }
 
+    /* Modulo (modulus)
+            Ex: 5 % 2 = 1
+                5 / 2 = 2 remainder 1
+        Note: this is not the same as division, which returns a quotient
+            Ex: 5 / 2 = 2 (integer division)
+
+        Using modulo to check if a number is even or odd:
+            Ex: 5 % 2 == 1 (odd), 6 % 2 == 0 (even)
+                5 modulus 2 is 1, because 5 divided by 2 is 2 with a remainder of 1
+                6 modulus 2 is 0, because 6 divided by 2 is 3 with a remainder of 0
+
+        Note: modulo is not the same as remainder, which is a concept in some programming languages
+            Ex: in Python, 5 % 2 == 1, but -5 % -2 == -1
+                in Solidity, 5 % -2 == 1, and -5 % -2 == -1
+            Be careful with negative numbers
+                Also note that Solidity does not support floating point numbers, so you cannot use modulo with non-integer numbers
+                Ex: 5.5 % 2.2 will not work
+                You can only use modulo with integers*/
     function mod(uint a, uint b) external pure returns(uint) {
         return a % b;
     }
@@ -90,7 +108,7 @@ contract Operators2 {
     }
 }
 
-// Locial Operators
+// Logical Operators
 // Homework: try implementing more of these
 // E.g. try checkingn expression equality like 1 + 1 == 2
 contract Operators3 {

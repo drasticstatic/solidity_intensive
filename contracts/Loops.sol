@@ -10,6 +10,7 @@ contract Loops1 {
     function countEvenNumbers() public view returns(uint) {
         uint count = 0;
 
+        // Using a for loop to iterate through the numbers array
         for (uint i = 0; i < numbers.length; i++) {
             if (i % 2 == 0) {
                 count ++;
@@ -32,7 +33,7 @@ contract Loops2 {
         while(x < 5) {
             // Uncomment this to see number logged to console
             // console.log(x);
-            emit LogNumber(x);
+            emit LogNumber(x); // Emitting an event to log the number
             x ++;
         }
 

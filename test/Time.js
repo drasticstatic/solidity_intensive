@@ -16,8 +16,8 @@ describe('Time Examples', () => {
       // Configure time
       let now = await time.latest()
 
-      // Uncomment this to see the current timestamp
       // console.log(now)
+      // ↑ Uncomment this to see the current unix timestamp
 
       let depositStartTime = now + 1000 // add 1,000 seconds
 
@@ -48,6 +48,5 @@ describe('Time Examples', () => {
       expect(await ethers.provider.getBalance(contract.address)).to.equal(ether(0))
 
     })
-
   })
 })

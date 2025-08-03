@@ -45,5 +45,4 @@ describe('Interactions', () => {
       expect(await token.balanceOf(contract.address)).to.equal(tokens(1000000))
     })
   })
-
 })
