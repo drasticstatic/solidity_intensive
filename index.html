@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solidity Intensive — Language Reference</title>
+  <meta name="description" content="A complete Solidity language reference — 18 contract modules covering every core concept from types to DeFi interactions." />
+  <link rel="icon" href="https://drasticstatic.github.io/favicon.svg" type="image/svg+xml" />
+  <style>
+    :root {
+      --bg: #0d1117; --surface: #161b22; --border: #30363d;
+      --text: #e6edf3; --muted: #8b949e; --accent: #f7931a;
+      --green: #3fb950; --blue: #58a6ff; --purple: #bc8cff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+
+    header { background: var(--surface); border-bottom: 1px solid var(--border); padding: 2rem 1.5rem; text-align: center; }
+    header h1 { font-size: 2.2rem; font-weight: 700; margin-bottom: .4rem; }
+    header h1 span { color: var(--accent); }
+    header p { color: var(--muted); font-size: 1.05rem; max-width: 600px; margin: 0 auto .8rem; }
+    .badges { display: flex; gap: .5rem; justify-content: center; flex-wrap: wrap; margin-top: .6rem; }
+    .badge { background: var(--border); border-radius: 4px; padding: .25rem .7rem; font-size: .75rem; color: var(--muted); text-decoration: none; border: 1px solid var(--border); }
+    .badge.green { border-color: var(--green); color: var(--green); }
+    .badge.blue { border-color: var(--blue); color: var(--blue); }
+    .badge.accent { border-color: var(--accent); color: var(--accent); }
+
+    main { max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem; }
+
+    .intro { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 1.5rem; margin-bottom: 2rem; }
+    .intro h2 { font-size: 1.1rem; color: var(--blue); margin-bottom: .6rem; }
+    .intro p { color: var(--muted); line-height: 1.6; }
+
+    h2.section { font-size: 1.2rem; color: var(--text); margin-bottom: 1rem; padding-bottom: .5rem; border-bottom: 1px solid var(--border); }
+    h2.section span { color: var(--accent); }
+
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; margin-bottom: 2.5rem; }
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 1.2rem; transition: border-color .2s; }
+    .card:hover { border-color: var(--blue); }
+    .card .tag { font-size: .7rem; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; color: var(--purple); margin-bottom: .4rem; }
+    .card h3 { font-size: 1rem; font-weight: 600; margin-bottom: .4rem; font-family: 'SF Mono', 'Fira Code', monospace; color: var(--accent); }
+    .card p { font-size: .85rem; color: var(--muted); line-height: 1.5; }
+
+    .stack { display: flex; gap: .75rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
+    .pill { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: .4rem 1rem; font-size: .85rem; color: var(--text); }
+
+    .cta { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .btn { display: inline-block; padding: .6rem 1.4rem; border-radius: 6px; font-size: .9rem; font-weight: 600; text-decoration: none; transition: opacity .2s; }
+    .btn:hover { opacity: .85; }
+    .btn-primary { background: var(--blue); color: #0d1117; }
+    .btn-secondary { background: transparent; border: 1px solid var(--border); color: var(--text); }
+
+    footer { text-align: center; padding: 2rem; color: var(--muted); font-size: .85rem; border-top: 1px solid var(--border); margin-top: 2rem; }
+    footer a { color: var(--blue); text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🧪 Solidity <span>Intensive</span></h1>
+  <p>A complete language reference — 18 contract modules covering every core Solidity concept from primitives to DeFi interactions.</p>
+  <div class="badges">
+    <span class="badge green">Solidity ^0.8</span>
+    <span class="badge blue">Hardhat Tested</span>
+    <span class="badge accent">18 Modules</span>
+    <span class="badge">DAPPU Bootcamp</span>
+  </div>
+</header>
+
+<main>
+  <div class="intro">
+    <h2>📖 About This Reference</h2>
+    <p>Each contract in this repo isolates a single Solidity concept with clean, commented code and corresponding Hardhat tests. Built during an intensive blockchain developer bootcamp — think of it as a Solidity cookbook where every chapter is a standalone, copy-ready recipe.</p>
+  </div>
+
+  <h2 class="section">📂 Contract <span>Modules</span></h2>
+  <div class="grid">
+    <div class="card"><div class="tag">Primitives</div><h3>Types.sol</h3><p>uint, int, bool, address, bytes — the full value type system with examples.</p></div>
+    <div class="card"><div class="tag">Scope</div><h3>Variables.sol</h3><p>State, local, and global variables. Visibility modifiers: public, private, internal, external.</p></div>
+    <div class="card"><div class="tag">Logic</div><h3>Functions.sol</h3><p>Pure, view, payable. Return values, function modifiers, and overloading.</p></div>
+    <div class="card"><div class="tag">Control Flow</div><h3>Conditionals.sol</h3><p>if/else, ternary, require, revert, and custom error patterns.</p></div>
+    <div class="card"><div class="tag">Iteration</div><h3>Loops.sol</h3><p>for, while, do-while — with gas cost considerations for unbounded loops.</p></div>
+    <div class="card"><div class="tag">Math</div><h3>Operators.sol</h3><p>Arithmetic, logical, bitwise, comparison, and assignment operators.</p></div>
+    <div class="card"><div class="tag">Data</div><h3>Arrays.sol</h3><p>Fixed and dynamic arrays, push/pop/delete, memory vs. storage location.</p></div>
+    <div class="card"><div class="tag">Data</div><h3>Mappings.sol</h3><p>Key-value stores, nested mappings, and enumeration limitations.</p></div>
+    <div class="card"><div class="tag">Data</div><h3>Structs.sol</h3><p>Custom data types, struct arrays, and efficient storage packing.</p></div>
+    <div class="card"><div class="tag">Patterns</div><h3>Enums.sol</h3><p>Enumerated types for state machines — the clean way to track lifecycle states.</p></div>
+    <div class="card"><div class="tag">Lifecycle</div><h3>Constructors.sol</h3><p>Initialization, constructor arguments, ownership, and one-time setup patterns.</p></div>
+    <div class="card"><div class="tag">Events</div><h3>Events.sol</h3><p>Emitting events, indexed parameters, and frontend subscription patterns.</p></div>
+    <div class="card"><div class="tag">Safety</div><h3>Errors.sol</h3><p>Custom errors, require vs. revert, and the gas savings of custom error types.</p></div>
+    <div class="card"><div class="tag">OOP</div><h3>Inheritance.sol</h3><p>is keyword, virtual/override, multiple inheritance, and super.</p></div>
+    <div class="card"><div class="tag">Finance</div><h3>Ether.sol</h3><p>msg.value, payable, transfer/send/call — and the receive/fallback function pair.</p></div>
+    <div class="card"><div class="tag">Time</div><h3>Time.sol</h3><p>block.timestamp, time-based access control, and expiry patterns.</p></div>
+    <div class="card"><div class="tag">DeFi</div><h3>Token.sol</h3><p>A manual ERC-20 implementation from scratch — no OpenZeppelin, pure Solidity.</p></div>
+    <div class="card"><div class="tag">DeFi</div><h3>Interactions.sol</h3><p>Calling external contracts, interfaces, and low-level call patterns.</p></div>
+  </div>
+
+  <h2 class="section">🛠 <span>Tech Stack</span></h2>
+  <div class="stack">
+    <span class="pill">Solidity ^0.8</span>
+    <span class="pill">Hardhat</span>
+    <span class="pill">ethers.js</span>
+    <span class="pill">Node.js</span>
+    <span class="pill">Mocha / Chai</span>
+  </div>
+
+  <h2 class="section">🚀 <span>Get Started</span></h2>
+  <div class="cta">
+    <a href="https://github.com/drasticstatic/solidity_intensive" class="btn btn-primary" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+    <a href="https://github.com/drasticstatic/solidity_intensive/tree/main/contracts" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Browse Contracts</a>
+    <a href="https://github.com/drasticstatic/solidity_intensive/tree/main/test" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">View Tests</a>
+  </div>
+</main>
+
+<footer>
+  Built during the <a href="https://github.com/drasticstatic">DAPPU Blockchain Developer Bootcamp</a> ·
+  <a href="https://github.com/drasticstatic/solidity_intensive">GitHub</a> ·
+  <a href="https://github.com/drasticstatic">drasticstatic</a>
+</footer>
+
+</body>
+</html>
