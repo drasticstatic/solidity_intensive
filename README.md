@@ -3,7 +3,7 @@
 > **A complete Solidity language reference — 18 contract modules covering every core concept from types to DeFi interactions.**
 
 [![Build Status](https://github.com/drasticstatic/solidity_intensive/actions/workflows/pages.yml/badge.svg)](https://github.com/drasticstatic/solidity_intensive/actions/workflows/pages.yml)
-[![License: MIT](https://img.shields.io/badge/license-MIT-lightgrey?style=flat-square)](LICENSE)
+[![License: MIT](https://img.shields.io/badge/license-MIT-lightgrey?style=flat)](https://github.com/drasticstatic/.github)
 [![Solidity](https://img.shields.io/badge/Solidity-^0.8-363636?style=flat-square&logo=solidity)](https://soliditylang.org/)
 [![Hardhat](https://img.shields.io/badge/Hardhat-tested-yellow?style=flat-square)](https://hardhat.org/)
 [![Live Reference](https://img.shields.io/badge/reference-live-0a7bff?style=flat-square&logo=githubpages)](https://drasticstatic.github.io/solidity_intensive)
