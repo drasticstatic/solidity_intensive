@@ -16,15 +16,17 @@
     .halo { opacity: 0 }
   </style>
   <defs>
-    <linearGradient id="ground" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1a2230"/><stop offset="1" stop-color="#101622"/></linearGradient>
-    <linearGradient id="line" gradientUnits="userSpaceOnUse" x1="668" y1="0" x2="1160" y2="0"><stop offset="0.00" stop-color="#8a6a2a"/><stop offset="0.50" stop-color="#d9a441"/><stop offset="1.00" stop-color="#e6d1a6"/></linearGradient>
-    <linearGradient id="fade" gradientUnits="userSpaceOnUse" x1="620" y1="0" x2="1200" y2="0"><stop offset="0" stop-color="#d9a441" stop-opacity="0"/><stop offset=".35" stop-color="#d9a441"/><stop offset="1" stop-color="#e6d1a6"/></linearGradient>
+    <linearGradient id="ground" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1a1a2e"/><stop offset="1" stop-color="#0f3460"/></linearGradient>
+    <linearGradient id="line" gradientUnits="userSpaceOnUse" x1="668" y1="0" x2="1160" y2="0"><stop offset="0.00" stop-color="#804c5a"/><stop offset="0.50" stop-color="#b87082"/><stop offset="1.00" stop-color="#ddb5bf"/></linearGradient>
+    <linearGradient id="fade" gradientUnits="userSpaceOnUse" x1="620" y1="0" x2="1200" y2="0"><stop offset="0" stop-color="#b87082" stop-opacity="0"/><stop offset=".35" stop-color="#b87082"/><stop offset="1" stop-color="#ddb5bf"/></linearGradient>
     <clipPath id="card"><rect width="1200" height="260" rx="18"/></clipPath>
+    <radialGradient id="ember" gradientUnits="userSpaceOnUse" cx="962" cy="124" r="390"><stop offset="0" stop-color="#800020" stop-opacity=".8"/><stop offset=".6" stop-color="#5c1a2b" stop-opacity=".45"/><stop offset="1" stop-color="#5c1a2b" stop-opacity="0"/></radialGradient>
   </defs>
   <g clip-path="url(#card)">
     <!-- an opaque ground: the same picture on GitHub's light and dark themes -->
     <rect width="1200" height="260" fill="url(#ground)"/>
-    <g stroke="#403c33" stroke-width="1" opacity=".5">
+    <rect width="1200" height="260" fill="url(#ember)"/>
+    <g stroke="#3a2b3f" stroke-width="1" opacity=".5">
     <path d="M668 28V222"/>
     <path d="M738 28V222"/>
     <path d="M809 28V222"/>
@@ -39,28 +41,28 @@
     <path d="M668 222H1160"/>
     </g>
     <path class="draw" pathLength="100" d="M692.0 198.0 L718.1 186.8 L744.2 188.3 L770.4 193.2 L796.5 171.3 L822.6 172.8 L848.7 138.5 L874.8 153.9 L900.9 148.2 L927.1 129.9 L953.2 112.9 L979.3 105.0 L1005.4 103.2 L1031.5 92.0 L1057.6 76.4 L1083.8 91.4 L1109.9 85.9 L1136.0 56.0" fill="none" stroke="url(#line)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="animation-delay:0.30s"/>
-    <circle class="halo" cx="1136.0" cy="56.0" r="13" fill="none" stroke="#e6d1a6" stroke-width="2"/>
+    <circle class="halo" cx="1136.0" cy="56.0" r="13" fill="none" stroke="#ddb5bf" stroke-width="2"/>
     <g font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">
-    <g class="arrive" style="animation-delay:0.40s"><circle cx="692.0" cy="198.0" r="13" fill="#101622" stroke="#d9a441" stroke-width="2.5"/><text x="692.0" y="202.5" fill="#e6d1a6">1</text></g>
-    <g class="arrive" style="animation-delay:0.56s"><circle cx="718.1" cy="186.8" r="13" fill="#101622" stroke="#d9a441" stroke-width="2.5"/><text x="718.1" y="191.3" fill="#e6d1a6">2</text></g>
-    <g class="arrive" style="animation-delay:0.73s"><circle cx="744.2" cy="188.3" r="13" fill="#101622" stroke="#d9a441" stroke-width="2.5"/><text x="744.2" y="192.8" fill="#e6d1a6">3</text></g>
-    <g class="arrive" style="animation-delay:0.89s"><circle cx="770.4" cy="193.2" r="13" fill="#101622" stroke="#d9a441" stroke-width="2.5"/><text x="770.4" y="197.7" fill="#e6d1a6">4</text></g>
-    <g class="arrive" style="animation-delay:1.06s"><circle cx="796.5" cy="171.3" r="13" fill="#101622" stroke="#d9a441" stroke-width="2.5"/><text x="796.5" y="175.8" fill="#e6d1a6">5</text></g>
-    <g class="arrive" style="animation-delay:1.22s"><circle cx="822.6" cy="172.8" r="13" fill="#101622" stroke="#d9a441" stroke-width="2.5"/><text x="822.6" y="177.3" fill="#e6d1a6">6</text></g>
-    <g class="arrive" style="animation-delay:1.39s"><circle cx="848.7" cy="138.5" r="13" fill="#101622" stroke="#d9a441" stroke-width="2.5"/><text x="848.7" y="143.0" fill="#e6d1a6">7</text></g>
-    <g class="arrive" style="animation-delay:1.55s"><circle cx="874.8" cy="153.9" r="13" fill="#101622" stroke="#d9a441" stroke-width="2.5"/><text x="874.8" y="158.4" fill="#e6d1a6">8</text></g>
-    <g class="arrive" style="animation-delay:1.72s"><circle cx="900.9" cy="148.2" r="13" fill="#101622" stroke="#d9a441" stroke-width="2.5"/><text x="900.9" y="152.7" fill="#e6d1a6">9</text></g>
-    <g class="arrive" style="animation-delay:1.88s"><circle cx="927.1" cy="129.9" r="13" fill="#101622" stroke="#d9a441" stroke-width="2.5"/><text x="927.1" y="134.4" fill="#e6d1a6">10</text></g>
-    <g class="arrive" style="animation-delay:2.05s"><circle cx="953.2" cy="112.9" r="13" fill="#101622" stroke="#d9a441" stroke-width="2.5"/><text x="953.2" y="117.4" fill="#e6d1a6">11</text></g>
-    <g class="arrive" style="animation-delay:2.21s"><circle cx="979.3" cy="105.0" r="13" fill="#101622" stroke="#d9a441" stroke-width="2.5"/><text x="979.3" y="109.5" fill="#e6d1a6">12</text></g>
-    <g class="arrive" style="animation-delay:2.38s"><circle cx="1005.4" cy="103.2" r="13" fill="#101622" stroke="#d9a441" stroke-width="2.5"/><text x="1005.4" y="107.7" fill="#e6d1a6">13</text></g>
-    <g class="arrive" style="animation-delay:2.54s"><circle cx="1031.5" cy="92.0" r="13" fill="#101622" stroke="#d9a441" stroke-width="2.5"/><text x="1031.5" y="96.5" fill="#e6d1a6">14</text></g>
-    <g class="arrive" style="animation-delay:2.71s"><circle cx="1057.6" cy="76.4" r="13" fill="#101622" stroke="#d9a441" stroke-width="2.5"/><text x="1057.6" y="80.9" fill="#e6d1a6">15</text></g>
-    <g class="arrive" style="animation-delay:2.87s"><circle cx="1083.8" cy="91.4" r="13" fill="#101622" stroke="#d9a441" stroke-width="2.5"/><text x="1083.8" y="95.9" fill="#e6d1a6">16</text></g>
-    <g class="arrive" style="animation-delay:3.04s"><circle cx="1109.9" cy="85.9" r="13" fill="#101622" stroke="#d9a441" stroke-width="2.5"/><text x="1109.9" y="90.4" fill="#e6d1a6">17</text></g>
-    <g class="arrive" style="animation-delay:3.20s"><circle cx="1136.0" cy="56.0" r="13" fill="#101622" stroke="#d9a441" stroke-width="2.5"/><text x="1136.0" y="60.5" fill="#e6d1a6">18</text></g>
+    <g class="arrive" style="animation-delay:0.40s"><circle cx="692.0" cy="198.0" r="13" fill="#121424" stroke="#b87082" stroke-width="2.5"/><text x="692.0" y="202.5" fill="#ddb5bf">1</text></g>
+    <g class="arrive" style="animation-delay:0.56s"><circle cx="718.1" cy="186.8" r="13" fill="#121424" stroke="#b87082" stroke-width="2.5"/><text x="718.1" y="191.3" fill="#ddb5bf">2</text></g>
+    <g class="arrive" style="animation-delay:0.73s"><circle cx="744.2" cy="188.3" r="13" fill="#121424" stroke="#b87082" stroke-width="2.5"/><text x="744.2" y="192.8" fill="#ddb5bf">3</text></g>
+    <g class="arrive" style="animation-delay:0.89s"><circle cx="770.4" cy="193.2" r="13" fill="#121424" stroke="#b87082" stroke-width="2.5"/><text x="770.4" y="197.7" fill="#ddb5bf">4</text></g>
+    <g class="arrive" style="animation-delay:1.06s"><circle cx="796.5" cy="171.3" r="13" fill="#121424" stroke="#b87082" stroke-width="2.5"/><text x="796.5" y="175.8" fill="#ddb5bf">5</text></g>
+    <g class="arrive" style="animation-delay:1.22s"><circle cx="822.6" cy="172.8" r="13" fill="#121424" stroke="#b87082" stroke-width="2.5"/><text x="822.6" y="177.3" fill="#ddb5bf">6</text></g>
+    <g class="arrive" style="animation-delay:1.39s"><circle cx="848.7" cy="138.5" r="13" fill="#121424" stroke="#b87082" stroke-width="2.5"/><text x="848.7" y="143.0" fill="#ddb5bf">7</text></g>
+    <g class="arrive" style="animation-delay:1.55s"><circle cx="874.8" cy="153.9" r="13" fill="#121424" stroke="#b87082" stroke-width="2.5"/><text x="874.8" y="158.4" fill="#ddb5bf">8</text></g>
+    <g class="arrive" style="animation-delay:1.72s"><circle cx="900.9" cy="148.2" r="13" fill="#121424" stroke="#b87082" stroke-width="2.5"/><text x="900.9" y="152.7" fill="#ddb5bf">9</text></g>
+    <g class="arrive" style="animation-delay:1.88s"><circle cx="927.1" cy="129.9" r="13" fill="#121424" stroke="#b87082" stroke-width="2.5"/><text x="927.1" y="134.4" fill="#ddb5bf">10</text></g>
+    <g class="arrive" style="animation-delay:2.05s"><circle cx="953.2" cy="112.9" r="13" fill="#121424" stroke="#b87082" stroke-width="2.5"/><text x="953.2" y="117.4" fill="#ddb5bf">11</text></g>
+    <g class="arrive" style="animation-delay:2.21s"><circle cx="979.3" cy="105.0" r="13" fill="#121424" stroke="#b87082" stroke-width="2.5"/><text x="979.3" y="109.5" fill="#ddb5bf">12</text></g>
+    <g class="arrive" style="animation-delay:2.38s"><circle cx="1005.4" cy="103.2" r="13" fill="#121424" stroke="#b87082" stroke-width="2.5"/><text x="1005.4" y="107.7" fill="#ddb5bf">13</text></g>
+    <g class="arrive" style="animation-delay:2.54s"><circle cx="1031.5" cy="92.0" r="13" fill="#121424" stroke="#b87082" stroke-width="2.5"/><text x="1031.5" y="96.5" fill="#ddb5bf">14</text></g>
+    <g class="arrive" style="animation-delay:2.71s"><circle cx="1057.6" cy="76.4" r="13" fill="#121424" stroke="#b87082" stroke-width="2.5"/><text x="1057.6" y="80.9" fill="#ddb5bf">15</text></g>
+    <g class="arrive" style="animation-delay:2.87s"><circle cx="1083.8" cy="91.4" r="13" fill="#121424" stroke="#b87082" stroke-width="2.5"/><text x="1083.8" y="95.9" fill="#ddb5bf">16</text></g>
+    <g class="arrive" style="animation-delay:3.04s"><circle cx="1109.9" cy="85.9" r="13" fill="#121424" stroke="#b87082" stroke-width="2.5"/><text x="1109.9" y="90.4" fill="#ddb5bf">17</text></g>
+    <g class="arrive" style="animation-delay:3.20s"><circle cx="1136.0" cy="56.0" r="13" fill="#121424" stroke="#b87082" stroke-width="2.5"/><text x="1136.0" y="60.5" fill="#ddb5bf">18</text></g>
     </g>
-    <rect x="0.0" y="248" width="300.5" height="12" fill="#334155"/><rect x="300.0" y="248" width="300.5" height="12" fill="#8a6a2a"/><rect x="600.0" y="248" width="300.5" height="12" fill="#d9a441"/><rect x="900.0" y="248" width="300.5" height="12" fill="#f1f5f9"/>
-    <g font-family="Helvetica Neue, Helvetica, Arial, sans-serif"><text x="56" y="72.0" fill="#d9a441" font-size="15" font-weight="700" letter-spacing=".6">DappU mentorship</text><text x="56" y="137.6" fill="#f1f5f9" font-size="60" font-weight="700" letter-spacing="-.5">solidity_intensive</text><text x="56" y="181.4" fill="#d3d7dd" font-size="23">A Solidity cookbook, one concept per contract</text></g>
+    <rect x="0.0" y="248" width="300.5" height="12" fill="#1a1a2e"/><rect x="300.0" y="248" width="300.5" height="12" fill="#5c1a2b"/><rect x="600.0" y="248" width="300.5" height="12" fill="#800020"/><rect x="900.0" y="248" width="300.5" height="12" fill="#fbeef1"/>
+    <g font-family="Helvetica Neue, Helvetica, Arial, sans-serif"><text x="56" y="72.0" fill="#c78f9d" font-size="15" font-weight="700" letter-spacing=".6">DappU mentorship</text><text x="56" y="137.6" fill="#fbeef1" font-size="60" font-weight="700" letter-spacing="-.5">solidity_intensive</text><text x="56" y="181.4" fill="#dcd0d6" font-size="23">A Solidity cookbook, one concept per contract</text></g>
   </g>
 </svg>

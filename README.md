@@ -7,13 +7,13 @@
 
 *A complete Solidity language reference — 18 contract modules covering every core concept from types to DeFi interactions.*
 
-![Status](https://img.shields.io/badge/Status-class_project-d9a441?style=flat-square)
+![Status](https://img.shields.io/badge/Status-class_project-800020?style=flat-square)
 ![For](https://img.shields.io/badge/For-Web3_learners-64748b?style=flat-square)
 [![Pages](https://github.com/drasticstatic/solidity_intensive/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/drasticstatic/solidity_intensive/actions/workflows/pages/pages-build-deployment)
-[![License: MIT](https://img.shields.io/badge/license-MIT-lightgrey?style=flat)](https://github.com/drasticstatic/.github)
+[![License: MIT](https://img.shields.io/badge/license-MIT-1a1a2e?style=flat)](https://github.com/drasticstatic/.github)
 [![Solidity](https://img.shields.io/badge/Solidity-^0.8-363636?style=flat&logo=solidity)](https://soliditylang.org/)
 [![Hardhat](https://img.shields.io/badge/Hardhat-tested-yellow?style=flat)](https://hardhat.org/)
-[![Live Reference](https://img.shields.io/badge/reference-live-0a7bff?style=flat&logo=githubpages)](https://drasticstatic.github.io/solidity_intensive)
+[![Live Reference](https://img.shields.io/badge/reference-live-5c1a2b?style=flat&logo=githubpages)](https://drasticstatic.github.io/solidity_intensive)
 
 <img src="assets/icons/map-pin.svg" width="16" height="16" alt=""> **You are here:** drasticstatic lab › DappU coursework › `solidity_intensive` · public · `main` is the working branch
 
